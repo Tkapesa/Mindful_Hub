@@ -1,0 +1,22 @@
+{
+  "name": "mindful_hub",
+  "version": "1.0.0",
+  "description": "Static site clone and deployment build for Mindful Hub",
+  "main": "index.js",
+  "scripts": {
+    "clone": "node clone-site.js",
+    "build:landing": "node build-landing.js",
+    "build:subpages": "node apply-subpage-reveal.js",
+    "build": "node build-deploy.js",
+    "rebuild": "npm run clone && npm run build",
+    "clean": "node -e \"const fs=require('fs');fs.rmSync('dist',{recursive:true,force:true});console.log('Cleaned dist');\"",
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "website-scraper": "^6.0.0"
+  }
+}
